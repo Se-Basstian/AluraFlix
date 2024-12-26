@@ -1,10 +1,13 @@
-import "./App.css";
-import { Routes } from "react-router";
+import { Routes, Route } from "react-router";
+import MainLayout from "./components/layout/MainLayout";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Routes>
-      <h1>Inicio del proyecto</h1>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
+      </Route>
     </Routes>
   );
 }
