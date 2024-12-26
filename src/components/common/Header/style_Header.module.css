@@ -1,0 +1,6 @@
+.header {
+    inline-size: 100%;
+    block-size: 125px;
+
+    background-color: rgb(38, 38, 38);
+}

@@ -1,0 +1,72 @@
+.nav {
+    max-inline-size: 1440px;
+    block-size: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img {
+    block-size: 40px;
+
+    @media (width <= 600px) {
+        block-size: 35px;
+    }
+}
+
+.divGrupoBotones {
+    --color: white;
+
+    inline-size: 386px;
+    block-size: 54px;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media (width <= 600px) {
+        block-size: 45px;
+        justify-content: center;
+        column-gap: 20px;
+        inline-size: fit-content;
+    }
+}
+
+.button {
+    inline-size: 180.12px;
+    block-size: 100%;
+    padding: 0;
+
+    background-color: transparent;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow:
+        2px 0px 2px var(--color),
+        -2px 0px 2px var(--color),
+        0px 2px 2px var(--color),
+        0px -2px 2px var(--color);
+
+    & > a {
+        color: var(--color);
+        text-transform: uppercase;
+        text-decoration-line: none;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &:hover {
+        --color: red;
+    }
+}
+
+button.button--seleccionado {
+    --color: rgb(34, 113, 209);
+    box-shadow:
+        2px 0px 2px var(--color),
+        -2px 0px 2px var(--color),
+        0px 2px 2px var(--color),
+        0px -2px 2px var(--color),
+        inset 0 2px 6px var(--color),
+        inset 0 -2px 6px var(--color);
+}
