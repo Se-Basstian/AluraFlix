@@ -5,6 +5,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    border-block-end: 4px solid #2271d1;
+
+    @media (width <= 470px) {
+        border: none;
+        border-block-start: 4px solid #2271d1;
+    }
 }
 
 .img {
@@ -12,6 +19,10 @@
 
     @media (width <= 600px) {
         block-size: 35px;
+    }
+
+    @media (width <= 470px) {
+        display: none;
     }
 }
 
@@ -23,6 +34,7 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @media (width <= 600px) {
         block-size: 45px;
@@ -30,43 +42,46 @@
         column-gap: 20px;
         inline-size: fit-content;
     }
-}
 
-.button {
-    inline-size: 180.12px;
-    block-size: 100%;
-    padding: 0;
-
-    background-color: transparent;
-
-    border: none;
-    border-radius: 10px;
-    box-shadow:
-        2px 0px 2px var(--color),
-        -2px 0px 2px var(--color),
-        0px 2px 2px var(--color),
-        0px -2px 2px var(--color);
-
-    & > a {
-        color: var(--color);
-        text-transform: uppercase;
-        text-decoration-line: none;
-        font-size: 2rem;
-        font-weight: 500;
-    }
-
-    &:hover {
-        --color: red;
+    @media (width <=470px) {
+        inline-size: 80%;
+        justify-content: space-around;
     }
 }
 
-button.button--seleccionado {
-    --color: rgb(34, 113, 209);
-    box-shadow:
-        2px 0px 2px var(--color),
-        -2px 0px 2px var(--color),
-        0px 2px 2px var(--color),
-        0px -2px 2px var(--color),
-        inset 0 2px 6px var(--color),
-        inset 0 -2px 6px var(--color);
+.home,
+.plus {
+    @media (width > 470px) {
+        display: none;
+    }
+}
+
+.home {
+    color: #2271d1;
+    inline-size: 22px;
+    block-size: 22px;
+}
+
+.plus {
+    color: #2271d1;
+    inline-size: 26px;
+    block-size: 26px;
+}
+
+.homeSolo:hover,
+.plusSolo:hover {
+    color: red;
+}
+
+.homeSolo {
+    /* color: #2271d1; */
+    color: white;
+    inline-size: 33px;
+    block-size: 33px;
+}
+
+.plusSolo {
+    color: white;
+    inline-size: 40px;
+    block-size: 40px;
 }
