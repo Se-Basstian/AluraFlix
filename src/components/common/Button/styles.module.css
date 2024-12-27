@@ -6,6 +6,10 @@
     block-size: 100%;
     padding: 0;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: transparent;
 
     border: none;
@@ -16,21 +20,21 @@
         0px 2px 2px var(--color),
         0px -2px 2px var(--color);
 
-    &:hover {
-        --color: red;
-    }
-
-    &:hover > * {
-        color: red;
-    }
-
     @media (width <= 600px) {
         --ancho: 130px;
     }
+
+    @media (width <= 470px) {
+        inline-size: fit-content;
+        padding-inline: 20px;
+        border-radius: 50px;
+
+        column-gap: 10px;
+    }
 }
 
-button.seleccionado {
-    --color: rgb(34, 113, 209);
+.activo {
+    --color: rgb(24, 113, 209);
 
     box-shadow:
         2px 0px 2px var(--color),
@@ -50,5 +54,11 @@ button.seleccionado {
 
     @media (width <= 600px) {
         font-size: 1.6rem;
+    }
+
+    @media (width <= 470px) {
+        font-size: 1.3rem;
+        align-self: flex-end;
+        margin-block-end: 12px;
     }
 }
