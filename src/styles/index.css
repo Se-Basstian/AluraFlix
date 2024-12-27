@@ -15,6 +15,6 @@ body {
 
 #root {
     inline-size: 100vw;
-    block-size: 100vh;
+    /* block-size: 100vh; */
     background-color: greenyellow;
 }

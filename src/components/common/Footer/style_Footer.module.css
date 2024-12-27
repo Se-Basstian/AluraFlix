@@ -1,0 +1,14 @@
+.footer {
+    inline-size: 100%;
+    block-size: 125px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+}
+
+.img {
+    block-size: 40px;
+}
