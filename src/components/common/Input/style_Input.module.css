@@ -1,0 +1,26 @@
+.label {
+    inline-size: 45%;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+}
+
+.input {
+    block-size: 62px;
+    background-color: transparent;
+    outline: none;
+
+    border-radius: 10px;
+    border-color: #999999;
+    color: white;
+
+    padding-inline: 10px;
+}
+
+.input::placeholder {
+    color: #bbb;
+}

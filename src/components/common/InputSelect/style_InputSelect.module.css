@@ -1,0 +1,21 @@
+.label {
+    inline-size: 45%;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+}
+
+.select {
+    block-size: 68px;
+    background-color: transparent;
+
+    border-radius: 10px;
+    border-color: #999999;
+    color: white;
+
+    padding-inline: 10px;
+}

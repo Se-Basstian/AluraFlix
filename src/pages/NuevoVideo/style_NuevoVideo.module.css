@@ -1,0 +1,54 @@
+.section {
+    margin-block: 71px;
+}
+
+.h2,
+.p {
+    color: white;
+    inline-size: fit-content;
+    margin-inline: auto;
+}
+
+.h2 {
+    font-size: 6rem;
+}
+
+.p {
+    font-size: 2rem;
+}
+
+.h3 {
+    color: white;
+    font-size: 3.6rem;
+    block-size: 91px;
+
+    border-block: 2px solid #999999;
+    display: flex;
+    align-items: center;
+    margin-block: 47px;
+}
+
+.div {
+    max-inline-size: 1000px;
+    margin-inline: auto;
+}
+
+.form {
+    display: flex;
+    flex-flow: column;
+    gap: 60px;
+}
+
+.grupoInput {
+    inline-size: 100%;
+    block-size: 108px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.grupoBotones {
+    display: flex;
+    gap: 30px;
+}
