@@ -57,31 +57,13 @@
 }
 
 .home {
-    color: #2271d1;
+    color: white;
     inline-size: 22px;
     block-size: 22px;
 }
 
 .plus {
-    color: #2271d1;
+    color: white;
     inline-size: 26px;
     block-size: 26px;
-}
-
-.homeSolo:hover,
-.plusSolo:hover {
-    color: red;
-}
-
-.homeSolo {
-    /* color: #2271d1; */
-    color: white;
-    inline-size: 33px;
-    block-size: 33px;
-}
-
-.plusSolo {
-    color: white;
-    inline-size: 40px;
-    block-size: 40px;
 }
