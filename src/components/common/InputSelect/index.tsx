@@ -10,10 +10,7 @@ function InputSelect({ nombre, opciones }: Props) {
   return (
     <label className={style.label}>
       {nombre}
-      <select className={style.select}>
-        <option disabled selected>
-          -Selecione una categoría-
-        </option>
+      <select defaultValue={"No valido"} className={style.select}>
         {opciones.map((opc) => {
           return (
             <option key={++i} value={opc.toLowerCase()}>

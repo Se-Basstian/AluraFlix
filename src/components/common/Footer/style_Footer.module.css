@@ -8,6 +8,10 @@
 
     background-color: black;
     border-block-start: 4px solid #2271d1;
+
+    @media (width <= 470px) {
+        display: none;
+    }
 }
 
 .img {

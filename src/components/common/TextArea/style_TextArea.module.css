@@ -1,5 +1,5 @@
 .label {
-    inline-size: 55%;
+    inline-size: 460px;
     color: white;
     font-size: 2rem;
     font-weight: 600;
@@ -9,6 +9,14 @@
     display: flex;
     flex-flow: column;
     row-gap: 10px;
+
+    @media (width <= 700px) {
+        inline-size: 80%;
+    }
+
+    @media (width <= 430px) {
+        inline-size: 100%;
+    }
 }
 
 .textarea {
@@ -22,6 +30,10 @@
     border-radius: 10px;
     border-color: #999999;
     color: white;
+
+    @media (width <= 700px) {
+        block-size: 200px;
+    }
 }
 
 .textarea::placeholder {

@@ -1,3 +1,11 @@
 .main {
+    --padding-x: 40px;
+
+    max-inline-size: calc(1440px - (2 * var(--padding-x)));
     min-block-size: calc(100vh - 250px);
+    padding-inline: var(--padding-x);
+
+    @media (width <= 430px) {
+        --padding-x: 20px;
+    }
 }

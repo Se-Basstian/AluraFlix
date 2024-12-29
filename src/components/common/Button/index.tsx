@@ -5,13 +5,15 @@ interface Props {
   valor: string;
   startIcon?: ReactNode;
   activo?: boolean;
+  adaptable?: "Libre" | "header" | "form";
 }
 
-function Button({ activo, valor, startIcon }: Props) {
+function Button({ activo, valor, startIcon, adaptable = "Libre" }: Props) {
   const clasesButton = () => {
     const clase: string[] = [];
 
     clase.push(styles.button);
+    clase.push(styles[adaptable]);
 
     if (activo) clase.push(styles.activo);
 

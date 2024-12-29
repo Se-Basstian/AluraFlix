@@ -7,14 +7,22 @@
 
 * {
     font-family: "Hind Mysuru", serif;
+    margin: 0;
 }
 
 body {
     writing-mode: horizontal-tb;
+    background-color: rgb(38, 38, 38);
 }
 
 #root {
     inline-size: 100vw;
     /* block-size: 100vh; */
-    background-color: greenyellow;
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+
+    @media (width <= 470px) {
+        flex-flow: column-reverse;
+    }
 }

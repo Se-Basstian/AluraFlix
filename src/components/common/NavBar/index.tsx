@@ -13,6 +13,7 @@ function NavBar() {
       <div className={style.divGrupoBotones}>
         <Link to="/">
           <Button
+            adaptable="header"
             valor="Home"
             startIcon={<GrHomeRounded className={style.home} />}
           />
@@ -20,6 +21,7 @@ function NavBar() {
 
         <Link to="/nuevo_video">
           <Button
+            adaptable="header"
             valor="Nuevo Video"
             startIcon={<FiPlusCircle className={style.plus} />}
           />

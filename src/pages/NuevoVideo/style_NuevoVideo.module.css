@@ -1,5 +1,9 @@
 .section {
     margin-block: 71px;
+
+    @media (width <= 470px) {
+        margin-block: 50px;
+    }
 }
 
 .h2,
@@ -11,10 +15,18 @@
 
 .h2 {
     font-size: 6rem;
+
+    @media (width <= 700px) {
+        font-size: 4rem;
+    }
 }
 
 .p {
     font-size: 2rem;
+
+    @media (width <= 700px) {
+        font-size: 1.5rem;
+    }
 }
 
 .h3 {
@@ -26,6 +38,11 @@
     display: flex;
     align-items: center;
     margin-block: 47px;
+
+    @media (width <= 700px) {
+        font-size: 3rem;
+        block-size: 70px;
+    }
 }
 
 .div {
@@ -37,6 +54,11 @@
     display: flex;
     flex-flow: column;
     gap: 60px;
+
+    @media (width <= 700px) {
+        gap: 40px;
+        align-items: center;
+    }
 }
 
 .grupoInput {
@@ -45,10 +67,32 @@
 
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
+
+    @media (width <= 700px) {
+        inline-size: 80%;
+        block-size: 216px;
+        flex-flow: column;
+    }
+
+    @media (width <= 430px) {
+        inline-size: 100%;
+    }
 }
 
 .grupoBotones {
     display: flex;
     gap: 30px;
+
+    @media (width <= 700px) {
+        justify-content: space-evenly;
+        inline-size: 80%;
+    }
+
+    @media (width <= 400px) {
+        flex-flow: column;
+        inline-size: 100%;
+        block-size: 120px;
+        align-items: center;
+    }
 }

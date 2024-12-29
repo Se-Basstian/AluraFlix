@@ -1,5 +1,5 @@
 .label {
-    inline-size: 45%;
+    inline-size: 48%;
     color: white;
     font-size: 2rem;
     font-weight: 600;
@@ -7,6 +7,10 @@
     display: flex;
     flex-flow: column;
     row-gap: 10px;
+
+    @media (width <= 700px) {
+        inline-size: 100%;
+    }
 }
 
 .select {
@@ -18,4 +22,8 @@
     color: white;
 
     padding-inline: 10px;
+
+    @media (width <= 700px) {
+        block-size: 54px;
+    }
 }
