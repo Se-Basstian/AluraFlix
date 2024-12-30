@@ -1,12 +1,13 @@
 .section {
     inline-size: 100%;
-
-    margin-block-end: calc(131px - 91px);
+    display: flex;
+    flex-flow: column;
 }
 
 .h3 {
-    inline-size: 432px;
-    block-size: 70px;
+    inline-size: fit-content;
+    padding-inline: 40px;
+    block-size: 60px;
     color: white;
     text-transform: uppercase;
     margin-block-end: 40px;
@@ -17,6 +18,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (width <= 798px) {
+        font-size: 2.4rem;
+        align-self: center;
+        block-size: 50px;
+    }
+
+    @media (width <= 470px) {
+        font-size: 1.8rem;
+        padding-inline: 20px;
+    }
 }
 
 .h3Color·front-end {
@@ -33,7 +45,17 @@
 
 .divCards {
     display: flex;
-    justify-content: space-between;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    gap: 35px;
 
     margin-block-end: 91px;
+
+    @media (width <= 798px) {
+        gap: 24px;
+        justify-content: space-between;
+        flex-flow: nowrap;
+        overflow: scroll;
+        padding: 6px;
+    }
 }

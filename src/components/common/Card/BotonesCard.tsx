@@ -4,7 +4,7 @@ import { AiFillEdit } from "react-icons/ai";
 
 function BotonesCard() {
   return (
-    <>
+    <div className={style.divBotones}>
       <button
         className={[style.button, style.button·1].join(" ")}
         type="button"
@@ -19,7 +19,7 @@ function BotonesCard() {
         <AiFillEdit className={style.iconEditar} />
         Editar
       </button>
-    </>
+    </div>
   );
 }
 

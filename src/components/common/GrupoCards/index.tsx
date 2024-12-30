@@ -16,6 +16,7 @@ function GrupoCards({ titulo, colorBorde }: Props) {
         <Card colorBorde={colorBorde} />
         <Card colorBorde={colorBorde} />
         <Card colorBorde={colorBorde} />
+        <Card colorBorde={colorBorde} />
       </div>
     </section>
   );

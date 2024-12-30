@@ -3,4 +3,9 @@
     block-size: 125px;
 
     background-color: rgb(38, 38, 38);
+
+    @media (width <= 470px) {
+        position: fixed;
+        bottom: 0;
+    }
 }
