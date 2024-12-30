@@ -1,3 +1,7 @@
 .article {
     margin-block-end: 131px;
+
+    @media (width <= 470px) {
+        padding-block-start: 50px;
+    }
 }

@@ -1,0 +1,80 @@
+.article {
+    inline-size: 100%;
+    block-size: 800px;
+    margin-block: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: radial-gradient(
+        circle at 50% 50%,
+        rgb(20, 20, 159) 20%,
+        rgb(20, 20, 100) 30%,
+        rgb(10, 10, 10) 35%,
+        rgb(34, 113, 209) 40%,
+        black 50%,
+        black 100%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (width <= 880px) {
+        block-size: 500px;
+    }
+
+    @media (width <= 470px) {
+        display: none;
+    }
+}
+
+.div {
+    inline-size: 45%;
+    block-size: 333px;
+
+    @media (width <= 880px) {
+        inline-size: 55%;
+    }
+}
+
+.h2,
+.h3,
+.p {
+    padding-inline: 15px;
+    color: white;
+}
+
+.h2 {
+    inline-size: fit-content;
+    font-size: 4.6rem;
+    text-decoration: underline;
+
+    margin-block-end: 40px;
+
+    @media (width <= 880px) {
+        font-size: 3.6rem;
+    }
+}
+
+.h3 {
+    inline-size: fit-content;
+    font-size: 4.6rem;
+    font-weight: 400;
+
+    @media (width <= 880px) {
+        font-size: 3.6rem;
+    }
+}
+
+.p {
+    font-size: 1.8rem;
+}
+
+.img {
+    inline-size: 45%;
+    block-size: 333px;
+
+    @media (width <= 880px) {
+        block-size: 220px;
+    }
+}
