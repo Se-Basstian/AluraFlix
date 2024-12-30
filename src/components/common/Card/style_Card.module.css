@@ -1,0 +1,52 @@
+.div {
+    inline-size: 30%;
+    block-size: 300px;
+    border-radius: 15px;
+    background-color: rgb(38, 38, 38);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 59px;
+}
+
+.colorBorde·front-end {
+    border: none;
+    box-shadow: 0 0 10px 2px #6bd1ff;
+}
+
+.colorBorde·back-end {
+    border: none;
+    box-shadow: 0 0 10px 2px #00c86f;
+}
+
+.colorBorde·inovacion-gestion {
+    border: none;
+    box-shadow: 0 0 10px 2px #ffba05;
+}
+
+.img {
+    grid-column: 1 / -1;
+    inline-size: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.button {
+    inline-size: 110px;
+    block-size: 28px;
+    place-self: center;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+
+    background: transparent;
+    border: none;
+
+    display: flex;
+    justify-content: space-around;
+
+    &:hover {
+        color: cornflowerblue;
+    }
+}

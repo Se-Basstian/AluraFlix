@@ -6,7 +6,7 @@ import Button from "../../components/common/Button";
 
 function NuevoVideo() {
   return (
-    <section className={style.section}>
+    <article className={style.article}>
       <h2 className={style.h2}>Nuevo Video</h2>
 
       <p className={style.p}>
@@ -44,7 +44,7 @@ function NuevoVideo() {
           </div>
         </form>
       </div>
-    </section>
+    </article>
   );
 }
 

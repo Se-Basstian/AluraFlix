@@ -1,0 +1,39 @@
+.section {
+    inline-size: 100%;
+
+    margin-block-end: calc(131px - 91px);
+}
+
+.h3 {
+    inline-size: 432px;
+    block-size: 70px;
+    color: white;
+    text-transform: uppercase;
+    margin-block-end: 40px;
+
+    font-size: 3.2rem;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h3Color·front-end {
+    background-color: #6bd1ff;
+}
+
+.h3Color·back-end {
+    background-color: #00c86f;
+}
+
+.h3Color·inovacion-gestion {
+    background-color: #ffba05;
+}
+
+.divCards {
+    display: flex;
+    justify-content: space-between;
+
+    margin-block-end: 91px;
+}
