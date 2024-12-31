@@ -23,11 +23,21 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    @media (width <= 810px) {
+        --ancho: 90vw;
+    }
+
+    @media (width <= 56px) {
+        --ancho: 97vw;
+    }
 }
 
 .cerrar {
-    inline-size: 53px;
-    block-size: 53px;
+    --diametro: 53px;
+
+    inline-size: var(--diametro);
+    block-size: var(--diametro);
     color: white;
     position: absolute;
     top: 15px;
@@ -36,6 +46,17 @@
     &:hover {
         color: red;
     }
+
+    @media (width <= 810px) {
+        --diametro: 35px;
+    }
+
+    @media (width <= 560px) {
+        top: 5px;
+        right: 5px;
+
+        --diametro: 28px;
+    }
 }
 
 .h3 {
@@ -43,30 +64,67 @@
     font-size: 6rem;
     color: #2271d1;
     text-transform: uppercase;
+
+    @media (width <= 810px) {
+        font-size: 4.5rem;
+    }
+
+    @media (width <= 560px) {
+        font-size: 2rem;
+        margin-block-end: 15px;
+    }
 }
 
 .form {
-    inline-size: 90%;
+    inline-size: 100%;
     block-size: 90%;
 
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
     align-items: center;
+
+    @media (width <= 560px) {
+        justify-content: space-between;
+    }
 }
 
 .divBotones {
     inline-size: 75%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+
+    @media (width <= 810px) {
+        justify-content: space-between;
+    }
+
+    @media (width <= 810px) {
+        inline-size: 90%;
+        block-size: 150px;
+        justify-content: center;
+    }
 }
 
 .inputs {
     inline-size: 75%;
+
+    @media (width <= 560px) {
+        font-size: 1.6rem;
+        inline-size: 90%;
+    }
 }
 
 .inputs > * {
     block-size: 40px;
+}
+
+.textArea {
+    inline-size: 75%;
+    @media (width <= 560px) {
+        inline-size: 90%;
+        font-size: 1.6rem;
+    }
 }
 
 .textArea > * {
