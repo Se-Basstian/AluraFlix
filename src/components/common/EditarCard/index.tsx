@@ -4,13 +4,22 @@ import TextArea from "../TextArea";
 import Button from "../Button";
 import style from "./style_EditarCard.module.css";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { ContextosGlobales } from "../../../utilidades/context";
+import { useContext } from "react";
 
 function EditarCard() {
+  const { EditarCard } = useContext(ContextosGlobales);
+
   return (
     <>
       <div className={style.fondo} />
       <article className={style.article}>
-        <IoMdCloseCircleOutline className={style.cerrar} />
+        <IoMdCloseCircleOutline
+          className={style.cerrar}
+          onClick={() => {
+            EditarCard.setValor(!EditarCard.valor);
+          }}
+        />
         <h3 className={style.h3}>Editar Card:</h3>
 
         <form className={style.form}>
