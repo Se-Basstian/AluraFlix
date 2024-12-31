@@ -21,6 +21,7 @@ body {
     background-color: black;
     display: flex;
     flex-flow: column;
+    position: relative;
 
     @media (width <= 470px) {
         flex-flow: column-reverse;
