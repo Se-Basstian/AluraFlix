@@ -8,5 +8,6 @@ export const ContextosGlobales = createContext(
       valor: datosFetch[];
       setValor: (valor: datosFetch[]) => void;
     };
+    IdEditar: { valor: number; setvalor: (valor: number) => void };
   },
 );

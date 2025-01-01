@@ -1,14 +1,19 @@
-import Input from "../Input";
-import InputSelect from "../InputSelect";
-import TextArea from "../TextArea";
-import Button from "../Button";
 import style from "./style_EditarCard.module.css";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { ContextosGlobales } from "../../../utilidades/context";
-import { useContext } from "react";
+import Form from "./Form";
+import { useContext, useEffect } from "react";
 
-function EditarCard() {
-  const { EditarCard } = useContext(ContextosGlobales);
+interface Props {
+  id: number;
+}
+
+function EditarCard({ id }: Props) {
+  const { EditarCard, DatosVideo } = useContext(ContextosGlobales);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -21,23 +26,13 @@ function EditarCard() {
           }}
         />
         <h3 className={style.h3}>Editar Card:</h3>
-
-        <form className={style.form}>
-          <Input className={[style.inputs]} nombre="titulo" />
-          <InputSelect
-            className={[style.inputs]}
-            nombre="Categorías"
-            opciones={["front-end", "back-end", "innovacion-gestion"]}
-          />
-          <Input className={[style.inputs]} nombre="Imagen" />
-          <Input className={[style.inputs]} nombre="Video" />
-          <TextArea className={[style.textArea]} nombre="Descripción" />
-
-          <div className={style.divBotones}>
-            <Button valor="Guardar" activo />
-            <Button valor="Limpiar" />
-          </div>
-        </form>
+        <Form
+          titulo={DatosVideo.valor[id].titulo}
+          portada={DatosVideo.valor[id].portada}
+          video={DatosVideo.valor[id].video}
+          categoria={DatosVideo.valor[id].categoria}
+          descripcion={DatosVideo.valor[id].descripcion}
+        />
       </article>
     </>
   );

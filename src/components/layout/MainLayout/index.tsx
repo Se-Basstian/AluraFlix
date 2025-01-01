@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 function MainLayout() {
   const [mostrarEditarCard, setMostrarEditarCard] = useState(false);
-
+  const [idEditar, setIdEditar] = useState(1);
   const [datosVideos, setDatoVideos] = useState<datosFetch[]>([]);
 
   useEffect(() => {
@@ -37,9 +37,13 @@ function MainLayout() {
             valor: datosVideos,
             setValor: setDatoVideos,
           },
+          IdEditar: {
+            valor: idEditar,
+            setvalor: setIdEditar,
+          },
         }}
       >
-        {mostrarEditarCard && <EditarCard />}
+        {mostrarEditarCard && <EditarCard id={idEditar} />}
         <Header />
         <main className={style.main}>
           <Outlet />

@@ -6,7 +6,7 @@
     background-color: rgb(0, 0, 0, 0.6);
 }
 
-.article {
+article.article {
     --ancho: 700px;
 
     position: absolute;
@@ -17,7 +17,7 @@
     border: 5px solid #6bd1ff;
     border-radius: 15px;
 
-    top: 200px;
+    top: 100px;
     left: calc(50vw - (var(--ancho) / 2));
 
     display: flex;
@@ -59,7 +59,7 @@
     }
 }
 
-.h3 {
+h3.h3 {
     inline-size: fit-content;
     font-size: 6rem;
     color: #2271d1;
@@ -75,7 +75,7 @@
     }
 }
 
-.form {
+form.form {
     inline-size: 100%;
     block-size: 90%;
 
@@ -106,7 +106,7 @@
     }
 }
 
-.inputs {
+label.inputs {
     inline-size: 75%;
 
     @media (width <= 560px) {
@@ -115,11 +115,11 @@
     }
 }
 
-.inputs > * {
+label.inputs > * {
     block-size: 40px;
 }
 
-.textArea {
+label.textArea {
     inline-size: 75%;
     @media (width <= 560px) {
         inline-size: 90%;
@@ -127,6 +127,6 @@
     }
 }
 
-.textArea > * {
+label.textArea > * {
     block-size: 180px;
 }

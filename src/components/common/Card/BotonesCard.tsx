@@ -9,7 +9,7 @@ interface Props {
 }
 
 function BotonesCard({ id }: Props) {
-  const { EditarCard, DatosVideo } = useContext(ContextosGlobales);
+  const { EditarCard, DatosVideo, IdEditar } = useContext(ContextosGlobales);
 
   const eliminarCard = () => {
     if (id === undefined) {
@@ -51,6 +51,7 @@ function BotonesCard({ id }: Props) {
         className={[style.button, style.button·2].join(" ")}
         type="button"
         onClick={() => {
+          IdEditar.setvalor(id ?? 1);
           EditarCard.setValor(!EditarCard.valor);
         }}
       >
