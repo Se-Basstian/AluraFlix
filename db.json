@@ -1,0 +1,70 @@
+{
+  "front_end": [
+    {
+      "id": 1,
+      "titulo": "Frameworks de  Front End - Edición Especial",
+      "portada": "https://i.ytimg.com/vi/UNeKzI2WHgQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwY-u5ctJjCVwDrZbRmPj3Nv2MIg",
+      "video": "https://youtu.be/UNeKzI2WHgQ?si=hxiaGHNziXR7_baJ"
+    },
+    {
+      "id": 2,
+      "titulo": "¿Que es JavaScript",
+      "portada": "https://i.ytimg.com/vi/GJfOSoaXk4s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAT6_IgPS6pW3DMYSkld-hw5P9nlA",
+      "video": "https://youtu.be/GJfOSoaXk4s?si=G-gmcqn79kkctku1"
+    },
+    {
+      "id": 3,
+      "titulo": "¿Por qué utilizar React?",
+      "portada": "https://i.ytimg.com/vi/MnBNPA45NW8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3h_-usoO4xx1X2kVo89Dw4o0ycQ",
+      "video": "https://youtu.be/MnBNPA45NW8?si=tvtVcyS2ZmHQq4dn"
+    },
+    {
+      "id": 4,
+      "titulo": "¿Cómo un desarrollador Frond End utiliza Figma?",
+      "portada": "https://i.ytimg.com/vi/UuAX5azcvDQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlquffYf62P2calDnVVyCjOIGP9w",
+      "video": "https://youtu.be/UuAX5azcvDQ?si=gsImmFv47ZAohvOR"
+    }
+  ],
+
+  "back_end": [
+    {
+      "id": 1,
+      "titulo": "Desmistificando el Back-End",
+      "portada": "https://i.ytimg.com/vi/LLt7FreeHfQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDy5zSUwKfrAwvob_w4md_lDT3ftQ",
+      "video": "https://www.youtube.com/live/LLt7FreeHfQ?si=3V1uZEpRjz7WZGLJ"
+    },
+    {
+      "id": 2,
+      "titulo": "Simplificando el Back End",
+      "portada": "https://i.ytimg.com/vi/XuSXJ9DUcvY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtGZw_oVDccujsMXujCLo23cuKxQ",
+      "video": "https://youtu.be/XuSXJ9DUcvY?si=AQ9HRKD8UxPdXCEu"
+    },
+    {
+      "id": 3,
+      "titulo": "De Front End a Back End con java",
+      "portada": "https://i.ytimg.com/vi/3aK3Omo2RrU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAW4wXcG8t2Ak7NjVMv9CjGAmRDvg",
+      "video": "https://youtu.be/3aK3Omo2RrU?si=nHRR5EURY5DrOGw2"
+    }
+  ],
+
+  "innovacion_gestion": [
+    {
+      "id": 1,
+      "titulo": "¿Cuál Herramienta de Gestión de Proyectos es la Mejor para TI?",
+      "portada": "https://i.ytimg.com/vi/O4cxvckONRE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6BcY6iCjMWePTYRflLH8ISDVEXg",
+      "video": "https://youtu.be/O4cxvckONRE?si=khWCmZy1Z5S54am5"
+    },
+    {
+      "id": 2,
+      "titulo": "¿Cómo ser más productivo",
+      "portada": "https://i.ytimg.com/vi/TF_Rde1kbw8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAy_Lqe0e9t1U2uLHpKL2IJotSeuA",
+      "video": "https://youtu.be/TF_Rde1kbw8?si=0KSwlX2AD76Q_OuV"
+    },
+    {
+      "id": 3,
+      "titulo": "¿Qué son las metodologías ágiles?",
+      "portada": "https://i.ytimg.com/vi/6N3OkLCfK-0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPlHipWDo4CSClFQ4yfqQ55ZpVTA",
+      "video": "https://youtu.be/6N3OkLCfK-0?si=NqS6bab30aRQyPUa"
+    }
+  ]
+}
