@@ -1,18 +1,22 @@
 import GrupoCards from "../../components/common/GrupoCards";
 import Banner from "../../components/common/Banner";
 import style from "./style_Home.module.css";
-import { fetchFrondEnd } from "../../services/Apis/fetchFrondEnd";
+import { fetchFrondEnd } from "../../services/Apis/fetchDatos";
 
-const datosApi = fetchFrondEnd("http://localhost:3000/front_end");
+const apiFrondEnd = fetchFrondEnd();
 
 function Home() {
-  const datos = datosApi.read();
+  const datosFrondEnd = apiFrondEnd.read();
 
   return (
     <>
       <Banner />
       <article className={style.article}>
-        <GrupoCards titulo="Front End" colorBorde="front-end" datos={datos} />
+        <GrupoCards
+          titulo="Front End"
+          colorBorde="front-end"
+          datos={datosFrondEnd}
+        />
         {/* <GrupoCards titulo="Back End" colorBorde="back-end" />
         <GrupoCards
           titulo="Inovación y Gestión"
