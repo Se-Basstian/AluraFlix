@@ -23,16 +23,17 @@ function BotonesCard({ id }: Props) {
         "Content-Type": "application/json",
       },
     })
+      .then((respueata) => respueata.json())
       .then(() => {
         DatosVideo.setValor(
           DatosVideo.valor.filter((video) => video.id !== id),
         );
 
-        console.log("Eliminado exitoso");
+        alert("Eliminado exitoso");
       })
 
-      .catch((err) => {
-        console.error("No se pudo eliminar la tarjeta", err);
+      .catch(() => {
+        alert("No se pudo eliminar la tarjeta");
       });
   };
 
