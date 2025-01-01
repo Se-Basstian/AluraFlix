@@ -1,27 +1,56 @@
 import GrupoCards from "../../components/common/GrupoCards";
 import Banner from "../../components/common/Banner";
 import style from "./style_Home.module.css";
-import { fetchFrondEnd } from "../../services/Apis/fetchDatos";
-
-const apiFrondEnd = fetchFrondEnd();
+import { ContextosGlobales } from "../../utilidades/context";
+import { useContext } from "react";
 
 function Home() {
-  const datosFrondEnd = apiFrondEnd.read();
+  const { DatosVideo } = useContext(ContextosGlobales);
+
+  const renderCars = (
+    categoria: "front-end" | "back-end" | "innovacion-gestion",
+  ) => {
+    switch (categoria) {
+      case "front-end":
+        return (
+          <GrupoCards
+            titulo="Font End"
+            colorBorde={categoria}
+            datos={DatosVideo.valor.filter(
+              (video) => video.categoria === categoria,
+            )}
+          />
+        );
+      case "back-end":
+        return (
+          <GrupoCards
+            titulo="Back End"
+            colorBorde={categoria}
+            datos={DatosVideo.valor.filter(
+              (video) => video.categoria === categoria,
+            )}
+          />
+        );
+      case "innovacion-gestion":
+        return (
+          <GrupoCards
+            titulo="Innovación y Gestión"
+            colorBorde={categoria}
+            datos={DatosVideo.valor.filter(
+              (video) => video.categoria === categoria,
+            )}
+          />
+        );
+    }
+  };
 
   return (
     <>
       <Banner />
       <article className={style.article}>
-        <GrupoCards
-          titulo="Front End"
-          colorBorde="front-end"
-          datos={datosFrondEnd}
-        />
-        {/* <GrupoCards titulo="Back End" colorBorde="back-end" />
-        <GrupoCards
-          titulo="Inovación y Gestión"
-          colorBorde="inovacion-gestion"
-        /> */}
+        {renderCars("front-end")}
+        {renderCars("back-end")}
+        {renderCars("innovacion-gestion")}
       </article>
     </>
   );

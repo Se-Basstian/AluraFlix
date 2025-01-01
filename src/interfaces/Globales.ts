@@ -3,4 +3,5 @@ export interface datosFetch {
   titulo: string;
   portada: string;
   video: string;
+  categoria: string;
 }

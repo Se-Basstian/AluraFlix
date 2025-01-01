@@ -7,6 +7,7 @@ interface Props {
   activo?: boolean;
   adaptable?: "Libre" | "header" | "form";
   className?: string[];
+  type?: "button" | "submit" | "reset";
 }
 
 function Button({
@@ -15,6 +16,7 @@ function Button({
   startIcon,
   adaptable = "Libre",
   className,
+  type = "button",
 }: Props) {
   const clasesButton = () => {
     const clase: string[] = [];
@@ -28,10 +30,7 @@ function Button({
   };
 
   return (
-    <button
-      className={`${clasesButton()} ${className?.join(" ")}`}
-      type="button"
-    >
+    <button className={`${clasesButton()} ${className?.join(" ")}`} type={type}>
       {startIcon}
       {valor}
     </button>

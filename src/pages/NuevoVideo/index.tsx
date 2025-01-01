@@ -39,7 +39,7 @@ function NuevoVideo() {
           />
 
           <div className={style.grupoBotones}>
-            <Button valor="Guardar" />
+            <Button type="submit" valor="Guardar" />
             <Button valor="Limpiar" />
           </div>
         </form>
