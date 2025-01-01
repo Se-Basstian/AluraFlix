@@ -71,14 +71,6 @@
       "categoria": "innovacion-gestion",
       "id": 9,
       "descripcion": "Sin descripción"
-    },
-    {
-      "titulo": "¿Qué hace un DESARROLLADOR BACKEND en 2024?",
-      "portada": "https://i.ytimg.com/vi/137Q1tSkZ-I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8MeV0MWaGSt0GyXHtyjXAy9_XTw",
-      "video": "https://youtu.be/137Q1tSkZ-I?si=_cEp8paM4-yXRCeK",
-      "categoria": "back-end",
-      "descripcion": "Un video que describe que hace un backend",
-      "id": 11
     }
   ]
 }

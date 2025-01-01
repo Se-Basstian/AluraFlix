@@ -21,7 +21,6 @@ function InputSelect({ nombre, opciones, className, valor, setValor }: Props) {
       {nombre}
       <select
         required
-        defaultValue="front-end"
         value={valor}
         onChange={cambioValor}
         className={style.select}

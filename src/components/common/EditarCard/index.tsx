@@ -27,7 +27,7 @@ function EditarCard() {
           <InputSelect
             className={[style.inputs]}
             nombre="Categorías"
-            opciones={["front-end", "back-end"]}
+            opciones={["front-end", "back-end", "innovacion-gestion"]}
           />
           <Input className={[style.inputs]} nombre="Imagen" />
           <Input className={[style.inputs]} nombre="Video" />
