@@ -4,44 +4,88 @@ import TextArea from "../TextArea";
 import Button from "../Button";
 import style from "./style_EditarCard.module.css";
 import type { datosFetch } from "../../../interfaces/Globales";
+import { type FormEvent, useState } from "react";
+// import { ContextosGlobales } from "../../../utilidades/context";
 
 function Form(videoDatos: datosFetch) {
+  // const { DatosVideo } = useContext(ContextosGlobales);
+
+  const [titulo, setTitulo] = useState(videoDatos.titulo);
+  const [categoria, setCategoria] = useState(videoDatos.categoria);
+  const [portada, setPortada] = useState(videoDatos.portada);
+  const [video, setVideo] = useState(videoDatos.video);
+  const [descripcion, setDescripcion] = useState(videoDatos.descripcion);
+
+  const actulizaDatos = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const nuevosDatos: datosFetch = {
+      titulo: titulo,
+      categoria: categoria,
+      portada: portada,
+      video: video,
+      descripcion: descripcion,
+    };
+
+    fetch(`http://localhost:3000/videos/${videoDatos.id ?? 1}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(nuevosDatos),
+    })
+      .then((respuesta) => respuesta.json)
+      .then(() => {
+        alert("Actualizado");
+      })
+      .catch(() => {
+        alert("No se pudo actualizar los datos");
+      });
+  };
+
   return (
-    <form className={style.form}>
+    <form onSubmit={actulizaDatos} className={style.form}>
       <Input
-        value={videoDatos.titulo}
-        setValue={() => {}}
+        value={titulo}
+        setValue={setTitulo}
         className={[style.inputs]}
         nombre="titulo"
       />
       <InputSelect
-        valor={videoDatos.categoria}
-        setValor={() => {}}
+        valor={categoria}
+        setValor={setCategoria}
         className={[style.inputs]}
         nombre="Categorías"
         opciones={["front-end", "back-end", "innovacion-gestion"]}
       />
       <Input
-        value={videoDatos.portada}
-        setValue={() => {}}
+        value={portada}
+        setValue={setPortada}
         className={[style.inputs]}
         nombre="Imagen"
       />
       <Input
-        value={videoDatos.video}
-        setValue={() => {}}
+        value={video}
+        setValue={setVideo}
         className={[style.inputs]}
         nombre="Video"
       />
       <TextArea
-        valor={videoDatos.descripcion}
-        setValor={() => {}}
+        valor={descripcion}
+        setValor={setDescripcion}
         className={[style.textArea]}
         nombre="Descripción"
       />
 
       <div className={style.divBotones}>
-        <Button valor="Guardar" activo />
+        <Button
+          valor="Guardar"
+          type="submit"
+          activo
+          onClick={() => {
+            console.log(videoDatos.id);
+          }}
+        />
         <Button valor="Limpiar" />
       </div>
     </form>

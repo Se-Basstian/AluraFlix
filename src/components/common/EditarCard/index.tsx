@@ -27,6 +27,7 @@ function EditarCard({ id }: Props) {
         />
         <h3 className={style.h3}>Editar Card:</h3>
         <Form
+          id={DatosVideo.valor[id].id}
           titulo={DatosVideo.valor[id].titulo}
           portada={DatosVideo.valor[id].portada}
           video={DatosVideo.valor[id].video}

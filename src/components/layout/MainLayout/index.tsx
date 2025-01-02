@@ -9,10 +9,12 @@ import { useState, useEffect } from "react";
 
 function MainLayout() {
   const [mostrarEditarCard, setMostrarEditarCard] = useState(false);
-  const [idEditar, setIdEditar] = useState(1);
+  const [idEditar, setIdEditar] = useState(0);
   const [datosVideos, setDatoVideos] = useState<datosFetch[]>([]);
 
   useEffect(() => {
+    console.log(mostrarEditarCard ? "Abrinedo Editor" : "Cerrando editor");
+
     fetch("http://localhost:3000/videos")
       .then((respuesta) => {
         return respuesta.json();
@@ -23,7 +25,7 @@ function MainLayout() {
       .catch((err: Error) => {
         console.error("No se puede cargar los datos:", err);
       });
-  }, []);
+  }, [mostrarEditarCard]);
 
   return (
     <>
@@ -43,7 +45,7 @@ function MainLayout() {
           },
         }}
       >
-        {mostrarEditarCard && <EditarCard id={idEditar} />}
+        {mostrarEditarCard && <EditarCard id={idEditar - 1} />}
         <Header />
         <main className={style.main}>
           <Outlet />

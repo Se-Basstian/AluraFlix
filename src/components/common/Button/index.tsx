@@ -8,6 +8,7 @@ interface Props {
   adaptable?: "Libre" | "header" | "form";
   className?: string[];
   type?: "button" | "submit" | "reset";
+  onClick?: () => void;
 }
 
 function Button({
@@ -17,6 +18,7 @@ function Button({
   adaptable = "Libre",
   className,
   type = "button",
+  onClick,
 }: Props) {
   const clasesButton = () => {
     const clase: string[] = [];
@@ -30,7 +32,11 @@ function Button({
   };
 
   return (
-    <button className={`${clasesButton()} ${className?.join(" ")}`} type={type}>
+    <button
+      className={`${clasesButton()} ${className?.join(" ")}`}
+      type={type}
+      onClick={onClick}
+    >
       {startIcon}
       {valor}
     </button>
