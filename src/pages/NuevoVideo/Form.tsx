@@ -14,6 +14,14 @@ function Form() {
   const [categoria, setCategoria] = useState("");
   const [descripcion, setDescripcion] = useState<string>();
 
+  const limpiarInputs = () => {
+    setTitulo("");
+    setImagen("");
+    setVideo("");
+    setCategoria("");
+    setDescripcion("");
+  };
+
   const { DatosVideo } = useContext(ContextosGlobales);
 
   const enviarFormulario = (e: FormEvent<HTMLFormElement>) => {
@@ -88,7 +96,7 @@ function Form() {
 
       <div className={style.grupoBotones}>
         <Button type="submit" valor="Guardar" />
-        <Button valor="Limpiar" />
+        <Button valor="Limpiar" onClick={limpiarInputs} />
       </div>
     </form>
   );

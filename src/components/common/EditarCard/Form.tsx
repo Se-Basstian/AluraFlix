@@ -5,16 +5,21 @@ import Button from "../Button";
 import style from "./style_EditarCard.module.css";
 import type { datosFetch } from "../../../interfaces/Globales";
 import { type FormEvent, useState } from "react";
-// import { ContextosGlobales } from "../../../utilidades/context";
 
 function Form(videoDatos: datosFetch) {
-  // const { DatosVideo } = useContext(ContextosGlobales);
-
   const [titulo, setTitulo] = useState(videoDatos.titulo);
   const [categoria, setCategoria] = useState(videoDatos.categoria);
   const [portada, setPortada] = useState(videoDatos.portada);
   const [video, setVideo] = useState(videoDatos.video);
   const [descripcion, setDescripcion] = useState(videoDatos.descripcion);
+
+  const limpiarInputs = () => {
+    setTitulo("");
+    setCategoria("");
+    setPortada("");
+    setVideo("");
+    setDescripcion("");
+  };
 
   const actulizaDatos = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -86,7 +91,7 @@ function Form(videoDatos: datosFetch) {
             console.log(videoDatos.id);
           }}
         />
-        <Button valor="Limpiar" />
+        <Button valor="Limpiar" onClick={limpiarInputs} />
       </div>
     </form>
   );
