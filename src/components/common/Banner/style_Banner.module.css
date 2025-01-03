@@ -73,6 +73,7 @@
 .img {
     inline-size: 45%;
     block-size: 333px;
+    border-radius: 20px;
 
     @media (width <= 880px) {
         block-size: 220px;

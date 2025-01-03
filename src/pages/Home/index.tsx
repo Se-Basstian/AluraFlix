@@ -6,6 +6,13 @@ import { useContext } from "react";
 
 function Home() {
   const { DatosVideo } = useContext(ContextosGlobales);
+  let numeroRandon: number;
+
+  if (DatosVideo.valor.length === 0) {
+    numeroRandon = -1;
+  } else {
+    numeroRandon = Math.floor(Math.random() * DatosVideo.valor.length - 1) + 1;
+  }
 
   const renderCars = (
     categoria: "front-end" | "back-end" | "innovacion-gestion",
@@ -46,7 +53,18 @@ function Home() {
 
   return (
     <>
-      <Banner />
+      <Banner
+        titulo={
+          numeroRandon === -1
+            ? undefined
+            : DatosVideo.valor[numeroRandon].titulo
+        }
+        img={
+          numeroRandon === -1
+            ? undefined
+            : DatosVideo.valor[numeroRandon].portada
+        }
+      />
       <article className={style.article}>
         {renderCars("front-end")}
         {renderCars("back-end")}

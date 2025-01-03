@@ -11,6 +11,10 @@
     @media (width <=280px) {
         block-size: 250px;
     }
+
+    &:hover {
+        background-color: yellowgreen;
+    }
 }
 
 .colorBorde·front-end {
