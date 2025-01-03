@@ -1,0 +1,79 @@
+.article {
+    inline-size: 100%;
+    min-block-size: 900px;
+    padding-block-end: 35px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (width <= 460px) {
+        justify-content: flex-start;
+        row-gap: 40px;
+    }
+}
+
+.h2,
+.h3,
+.p {
+    color: white;
+}
+
+.h2 {
+    align-self: flex-start;
+    font-size: 6.5rem;
+    margin-inline-start: 80px;
+
+    @media (width <= 1040px) {
+        font-size: 5rem;
+        margin: 0;
+    }
+
+    @media (width <= 580px) {
+        font-size: 4rem;
+    }
+
+    @media (width <= 460px) {
+        font-size: 2.5rem;
+    }
+}
+
+.iframe {
+    inline-size: 70%;
+    aspect-ratio: 2 / 1;
+    border-radius: 20px;
+
+    @media (width <= 900px) {
+        inline-size: 90%;
+    }
+
+    @media (width <= 580px) {
+        inline-size: 100%;
+        aspect-ratio: 8 / 6;
+    }
+}
+
+.section {
+    inline-size: 70%;
+
+    @media (width <= 900px) {
+        inline-size: 90%;
+    }
+}
+
+.h3 {
+    font-size: 4rem;
+
+    @media (width <= 460px) {
+        font-size: 2rem;
+    }
+}
+
+.p {
+    font-size: 2rem;
+
+    @media (width <= 460px) {
+        font-size: 1.6rem;
+    }
+}
