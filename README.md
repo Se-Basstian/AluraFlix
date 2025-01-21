@@ -1,7 +1,7 @@
 # AluraFlix 🇵🇪 🇵🇪 🇵🇪
 
 Una página  web donde podemos guardar  nuestros vídoes favoritos de youtube.<br/><br/>
-Puedes probarlo en el siguiente enlace [AluraFlix](https://alura-flix-seven-navy.vercel.app/).
+Puedes probarlo en el siguiente enlace [AluraFlix](https://alura-flix-seven-sooty.vercel.app/).
 Esta página usa un fakeAPI por lo que algunas caracteristicas no están disponibles. para poder usarlo en tu totalidad le recomiendo que siga los siguientes paso.
 
 ## Tabla de contenido
