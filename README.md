@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# AluraFlix 🇵🇪 🇵🇪 🇵🇪
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una página  web donde podemos guardar  nuestros vídoes favoritos de youtube.<br/><br/>
+Puedes probarlo en el siguiente enlace [AluraFlix](https://alura-flix-seven-navy.vercel.app/).
+Esta página usa un fakeAPI por lo que algunas caracteristicas no están disponibles. para poder usarlo en tu totalidad le recomiendo que siga los siguientes paso.
 
-Currently, two official plugins are available:
+## Tabla de contenido
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. [Requisitos](#requisitos)
+2. [Instalación](#instalación)
+3. [Uso](#uso)
 
-## Expanding the ESLint configuration
+## Requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Bun](https://bun.sh/): Conjunto de herramientas de Javascript y Typescript.
+- [Zed](https://zed.dev/): Editor de código, (puede usar el que desee).
 
-- Configure the top-level `parserOptions` property like this:
+## Instalación
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clona el repositorio:
+   ```bash
+   gh repo clone Se-Basstian/AluraFlix
+   ```
+2. Navega a la carpeta del proyecto:
+    ```bash
+    cd AluraFlix/
+    ```
+3. Instala las dependencias:
+    ```bash
+    bun install
+    ```
+
+## Uso
+### Modificamos la varable global de API_VIDEOS ubicado en el archivo «variablesGlobales»:
+```text
+/
+├── src/
+│   └── variablesGlobales.ts
+│   ·.
+|   ·
+└── package.json
+```
+```typescript
+const API_VIDEOS = "http://localhost:3000/videos";
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Para iniciar el proyecto usa el siguiente comando:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. Inicimas el json-server que servidara como una base de datos falsa:
+```bash
+bunx json-server --watch db.json
+```
+2. Ahora podemos iniciar el el proyecto en modo desarrollo, con el siguiente comando:
+```bash
+bun run dev
 ```
