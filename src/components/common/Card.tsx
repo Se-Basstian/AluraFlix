@@ -3,7 +3,7 @@ import imgPlay from "../../assets/images/img-play.png";
 import imgPlayHover from "../../assets/images/img-play-hover.png";
 import type { FC, MouseEvent } from "react";
 import { useContext, useState } from "react";
-import { ContextoDatos } from "../../routes/Home";
+import { ContextoDatos } from "../../layouts/DefaultLayout";
 import { API_VIDEOS } from "../../variablesGLobales";
 import { Link } from "react-router";
 
@@ -14,26 +14,23 @@ interface Props {
     alt?: string;
   };
   grupo?: "front end" | "back end" | "innovación y gestión";
-  setValor?(valor: boolean): void;
 }
 
 type ClickButton = (evt: MouseEvent<HTMLButtonElement>) => void;
 
-const Card: FC<Props> = ({ id, imagen, grupo = "front end", setValor }) => {
+const Card: FC<Props> = ({ id, imagen, grupo = "front end" }) => {
   const [play, setPlay] = useState(imgPlay);
   const datosContext = useContext(ContextoDatos);
 
   const handleClickEditar: ClickButton = () => {
     datosContext.ID.setValor(id);
 
-    if (setValor) {
-      setValor(true);
+    datosContext.verEditor.setValor(true);
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const handleClickBorrar: ClickButton = () => {
@@ -45,7 +42,9 @@ const Card: FC<Props> = ({ id, imagen, grupo = "front end", setValor }) => {
     })
       .then((respuesta) => {
         if (respuesta.ok) alert("Borrado correctamente");
-        datosContext.ID.setValor(0);
+        datosContext.datosVideo.setValor(
+          datosContext.datosVideo.valor.filter((video) => video.id !== id),
+        );
       })
       .catch(() => {
         alert("Algo salió mal");

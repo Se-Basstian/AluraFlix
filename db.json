@@ -41,14 +41,6 @@
       "descripcion": "Sin descripción"
     },
     {
-      "id": 6,
-      "titulo": "De Front End a Back End con java",
-      "imagen": "https://i.ytimg.com/vi/3aK3Omo2RrU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAW4wXcG8t2Ak7NjVMv9CjGAmRDvg",
-      "video": "https://www.youtube.com/embed/3aK3Omo2RrU?si=XLx-VsS4Jhe7jFsM",
-      "grupo": "back end",
-      "descripcion": "Sin descripción"
-    },
-    {
       "id": 7,
       "titulo": "¿Cuál Herramienta de Gestión de Proyectos es la Mejor para TI?",
       "imagen": "https://i.ytimg.com/vi/O4cxvckONRE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6BcY6iCjMWePTYRflLH8ISDVEXg",
@@ -62,14 +54,6 @@
       "imagen": "https://i.ytimg.com/vi/TF_Rde1kbw8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAy_Lqe0e9t1U2uLHpKL2IJotSeuA",
       "video": "https://www.youtube.com/embed/l-NyhyhW6Rc?si=IP_7UudmgnyAPW9Z",
       "grupo": "innovación y gestión",
-      "descripcion": "Sin descripción"
-    },
-    {
-      "titulo": "Innovación, deseño y gestión",
-      "imagen": "https://i.ytimg.com/vi/6sF0Or9fk9Y/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IBMoHjAP&rs=AOn4CLDIuEOc-L9EoF377vbI0Kb4DsN8pg",
-      "video": "https://www.youtube.com/embed/6sF0Or9fk9Y?si=IxTrreeRyNQ7twM7",
-      "grupo": "innovación y gestión",
-      "id": 9,
       "descripcion": "Sin descripción"
     }
   ]

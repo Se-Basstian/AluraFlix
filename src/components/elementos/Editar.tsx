@@ -5,30 +5,26 @@ import InputSelect from "../forms/InputSelect";
 import TextArea from "../forms/TextArea";
 import Button from "../common/Button";
 import imgCerrar from "../../assets/images/img-cerrar.png";
-import { ContextoDatos } from "../../routes/Home";
+import { ContextoDatos } from "../../layouts/DefaultLayout";
 import { API_VIDEOS } from "../../variablesGLobales";
-
-interface Props {
-  setValor?(valor: boolean): void;
-}
 
 type ClickButton = (evt: MouseEvent<HTMLButtonElement>) => void;
 
-const Editar: FC<Props> = ({ setValor }) => {
-  const { ID, datosVideo } = useContext(ContextoDatos);
+const Editar: FC = () => {
+  const { ID, datosVideo, verEditor } = useContext(ContextoDatos);
 
-  const [titulo, setTitulo] = useState(datosVideo[ID.valor - 1].titulo);
+  const [titulo, setTitulo] = useState(datosVideo.valor[ID.valor - 1].titulo);
   const [categoria, setCategoria] = useState<
     "front end" | "back end" | "innovación y gestión"
-  >(datosVideo[ID.valor - 1].grupo);
-  const [imagen, setImagen] = useState(datosVideo[ID.valor - 1].imagen);
-  const [video, setVideo] = useState(datosVideo[ID.valor - 1].video);
+  >(datosVideo.valor[ID.valor - 1].grupo);
+  const [imagen, setImagen] = useState(datosVideo.valor[ID.valor - 1].imagen);
+  const [video, setVideo] = useState(datosVideo.valor[ID.valor - 1].video);
   const [descripcion, setDescripcion] = useState(
-    datosVideo[ID.valor - 1].descripcion,
+    datosVideo.valor[ID.valor - 1].descripcion,
   );
 
   const handleClickButtonClose: ClickButton = () => {
-    if (setValor) setValor(false);
+    verEditor.setValor(false);
   };
 
   const handleClickLimpiar: ClickButton = () => {
@@ -66,7 +62,9 @@ const Editar: FC<Props> = ({ setValor }) => {
   return (
     <>
       <div
-        className={clsx("absolute top-0 left-0 w-full h-full bg-[#000000a0]")}
+        className={clsx(
+          "absolute top-0 left-0 w-full min-h-[500%] bg-[#000000a0]",
+        )}
       />
 
       <article

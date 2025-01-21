@@ -1,7 +1,9 @@
 import clsx from "clsx";
+import { useContext } from "react";
 import { useParams } from "react-router";
-import { useEffect, useState } from "react";
-import { API_VIDEOS } from "../variablesGLobales";
+import { ContextoDatos } from "../layouts/DefaultLayout";
+import { useState } from "react";
+// import { API_VIDEOS } from "../variablesGLobales";
 
 interface Video {
   id?: number;
@@ -20,18 +22,23 @@ const Repoductor = () => {
       "The legendary video was directed by Simon West – who later went on to make Hollywood blockbusters such as Con Air, Lara Croft – Tomb Raider and The Expendables 2.  The video passed the 1bn YouTube views milestone on 28 July 2021.",
   });
 
+  const { datosVideo } = useContext(ContextoDatos);
   const { paramId } = useParams();
 
-  useEffect(() => {
-    fetch(`${API_VIDEOS}/${paramId}`)
-      .then((respuesta) => respuesta.json())
-      .then((data: Video) => {
-        setDato(data);
-      })
-      .catch(() => {
-        console.log("Algo salió mal");
-      });
-  }, [paramId]);
+  if (datosVideo.valor.length !== 0) {
+    setDato(datosVideo.valor[Number(paramId)]);
+  }
+
+  // useEffect(() => {
+  //   fetch(`${API_VIDEOS}/${paramId}`)
+  //     .then((respuesta) => respuesta.json())
+  //     .then((data: Video) => {
+  //       setDato(data);
+  //     })
+  //     .catch(() => {
+  //       console.log("Algo salió mal");
+  //     });
+  // }, [paramId]);
 
   return (
     <article
