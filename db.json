@@ -1,0 +1,76 @@
+{
+  "videos": [
+    {
+      "titulo": "Frameworks de  Front End - Edición Especial",
+      "imagen": "https://i.ytimg.com/vi/UNeKzI2WHgQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCwY-u5ctJjCVwDrZbRmPj3Nv2MIg",
+      "video": "https://www.youtube.com/embed/UNeKzI2WHgQ?si=eHWSgKmUvi_Q3Bto",
+      "grupo": "front end",
+      "descripcion": "Sin descripción",
+      "id": 1
+    },
+    {
+      "titulo": "¿Que es JavaScript?",
+      "imagen": "https://i.ytimg.com/vi/GJfOSoaXk4s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAT6_IgPS6pW3DMYSkld-hw5P9nlA",
+      "video": "https://www.youtube.com/embed/GJfOSoaXk4s?si=941G6glQd0eJsW0h",
+      "grupo": "front end",
+      "descripcion": "Sin descripción",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "titulo": "¿Por qué utilizar React?",
+      "imagen": "https://i.ytimg.com/vi/MnBNPA45NW8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3h_-usoO4xx1X2kVo89Dw4o0ycQ",
+      "video": "https://www.youtube.com/embed/MnBNPA45NW8?si=MSzy14Gx75eKl2WS",
+      "grupo": "front end",
+      "descripcion": "Sin descripción"
+    },
+    {
+      "id": 4,
+      "titulo": "Desmistificando el Back-End",
+      "imagen": "https://i.ytimg.com/vi/LLt7FreeHfQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDy5zSUwKfrAwvob_w4md_lDT3ftQ",
+      "video": "https://www.youtube.com/embed/LLt7FreeHfQ?si=OICiAtqT5e03pYdk",
+      "grupo": "back end",
+      "descripcion": "Sin descripción"
+    },
+    {
+      "id": 5,
+      "titulo": "Simplificando el Back End",
+      "imagen": "https://i.ytimg.com/vi/XuSXJ9DUcvY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAtGZw_oVDccujsMXujCLo23cuKxQ",
+      "video": "https://www.youtube.com/embed/XuSXJ9DUcvY?si=S83yLDVhB_iUVZjQ",
+      "grupo": "back end",
+      "descripcion": "Sin descripción"
+    },
+    {
+      "id": 6,
+      "titulo": "De Front End a Back End con java",
+      "imagen": "https://i.ytimg.com/vi/3aK3Omo2RrU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAW4wXcG8t2Ak7NjVMv9CjGAmRDvg",
+      "video": "https://www.youtube.com/embed/3aK3Omo2RrU?si=XLx-VsS4Jhe7jFsM",
+      "grupo": "back end",
+      "descripcion": "Sin descripción"
+    },
+    {
+      "id": 7,
+      "titulo": "¿Cuál Herramienta de Gestión de Proyectos es la Mejor para TI?",
+      "imagen": "https://i.ytimg.com/vi/O4cxvckONRE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6BcY6iCjMWePTYRflLH8ISDVEXg",
+      "video": "https://www.youtube.com/embed/O4cxvckONRE?si=aVmFhX27Qxqw079m",
+      "grupo": "innovación y gestión",
+      "descripcion": "Sin descripción"
+    },
+    {
+      "id": 8,
+      "titulo": "¿Cómo ser más productivo",
+      "imagen": "https://i.ytimg.com/vi/TF_Rde1kbw8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAy_Lqe0e9t1U2uLHpKL2IJotSeuA",
+      "video": "https://www.youtube.com/embed/l-NyhyhW6Rc?si=IP_7UudmgnyAPW9Z",
+      "grupo": "innovación y gestión",
+      "descripcion": "Sin descripción"
+    },
+    {
+      "titulo": "Innovación, deseño y gestión",
+      "imagen": "https://i.ytimg.com/vi/6sF0Or9fk9Y/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IBMoHjAP&rs=AOn4CLDIuEOc-L9EoF377vbI0Kb4DsN8pg",
+      "video": "https://www.youtube.com/embed/6sF0Or9fk9Y?si=IxTrreeRyNQ7twM7",
+      "grupo": "innovación y gestión",
+      "id": 9,
+      "descripcion": "Sin descripción"
+    }
+  ]
+}

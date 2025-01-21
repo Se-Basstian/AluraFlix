@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-size: 10px;
+}
+
+html,
+body {
+    @apply bg-white dark:bg-gray-950;
+    @media (prefers-color-scheme: dark) {
+        color-scheme: dark;
+    }
+}
+
+.fondo-banner {
+    background-color: #151a1f;
+    background-image: radial-gradient(
+            transparent 1%,
+            rgb(33, 35, 37, 0.3) 10%,
+            rgb(33, 35, 37, 0.7) 32%,
+            rgb(33, 35, 37)
+        ),
+        url("./assets/images/logo-AluraFlix.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
