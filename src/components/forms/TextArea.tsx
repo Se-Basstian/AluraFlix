@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { FocusEvent, FC, ChangeEvent } from "react";
+import type { FC, ChangeEvent } from "react";
 import { useState } from "react";
 
 interface Props {
@@ -23,10 +23,10 @@ const TextArea: FC<Props> = ({
     if (setValue) setValue(e.target.value);
   };
 
-  const handleFocus = (e: FocusEvent<HTMLTextAreaElement>) => {
+  const handleFocus = () => {
     setColorTitulo(true);
   };
-  const handleBlur = (e: FocusEvent<HTMLTextAreaElement>) => {
+  const handleBlur = () => {
     setColorTitulo(false);
   };
 
@@ -39,7 +39,7 @@ const TextArea: FC<Props> = ({
         {
           "text-white": !colorTitulo,
           "text-[#2271D1]": colorTitulo,
-        }
+        },
       )}
     >
       {titulo}
@@ -49,7 +49,7 @@ const TextArea: FC<Props> = ({
           "rounded-lg resize-none p-[10px]",
           "focus:border-2 focus:border-solid focus:border-[#2271D1]",
           "focus:text-[#2271D1]",
-          "border-2 border-solid border-[#353535]"
+          "border-2 border-solid border-[#353535]",
         )}
         placeholder={placeholder}
         onFocus={handleFocus}

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ChangeEvent, FC, FocusEvent } from "react";
+import type { ChangeEvent, FC } from "react";
 import { useState } from "react";
 
 interface Props {
@@ -23,13 +23,13 @@ const InputSelect: FC<Props> = ({
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     if (setValue)
       setValue(
-        e.target.value as "front end" | "back end" | "innovación y gestión"
+        e.target.value as "front end" | "back end" | "innovación y gestión",
       );
   };
-  const handleFocus = (e: FocusEvent<HTMLSelectElement>) => {
+  const handleFocus = () => {
     setEnFoco(true);
   };
-  const handleBlur = (e: FocusEvent<HTMLSelectElement>) => {
+  const handleBlur = () => {
     setEnFoco(false);
   };
 
@@ -42,7 +42,7 @@ const InputSelect: FC<Props> = ({
         {
           "text-[#2271d1]": enFoco,
           "text-white": !enFoco,
-        }
+        },
       )}
     >
       {titulo}
@@ -50,7 +50,7 @@ const InputSelect: FC<Props> = ({
         className={clsx(
           "w-full h-[67px] px-[10px] rounded-lg  m760:h-[45px]",
           "border-2 border-solid border-[#353535]",
-          "m760:h-[55px]"
+          "m760:h-[55px]",
         )}
         value={value}
         onChange={handleChange}

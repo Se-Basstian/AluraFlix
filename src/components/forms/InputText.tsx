@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ChangeEvent, FC, FocusEvent } from "react";
+import type { ChangeEvent, FC } from "react";
 import { useState } from "react";
 
 interface Props {
@@ -23,10 +23,10 @@ const InputTexto: FC<Props> = ({
     if (setValue) setValue(e.target.value);
   };
 
-  const handleFocus = (e: FocusEvent<HTMLInputElement>) => {
+  const handleFocus = () => {
     setEnFoco(true);
   };
-  const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
+  const handleBlur = () => {
     setEnFoco(false);
   };
 
@@ -39,7 +39,7 @@ const InputTexto: FC<Props> = ({
           "text-[#2271d1]": enFoco,
           "text-white": !enFoco,
         },
-        className
+        className,
       )}
     >
       {titulo}
@@ -48,7 +48,7 @@ const InputTexto: FC<Props> = ({
           "w-full h-[66px] placeholder:text-[#A5A5A5] my-outline-none rounded-lg",
           "px-[10px] focus:border-2 focus:border-solid focus:border-[#2271D1]",
           "focus:text-[#2271d1] border-2 border-solid border-[#353535]",
-          "m760:h-[55px] outline-none"
+          "m760:h-[55px] outline-none",
         )}
         type="text"
         placeholder={placeholder}
