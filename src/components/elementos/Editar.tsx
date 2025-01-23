@@ -1,5 +1,11 @@
 import clsx from "clsx";
-import { useContext, useState, type FC, type MouseEvent } from "react";
+import {
+  useContext,
+  useEffect,
+  useState,
+  type FC,
+  type MouseEvent,
+} from "react";
 import InputTexto from "../forms/InputText";
 import InputSelect from "../forms/InputSelect";
 import TextArea from "../forms/TextArea";
@@ -10,18 +16,38 @@ import { API_VIDEOS } from "../../variablesGLobales";
 
 type ClickButton = (evt: MouseEvent<HTMLButtonElement>) => void;
 
-const Editar: FC = () => {
-  const { ID, datosVideo, verEditor } = useContext(ContextoDatos);
+interface Video {
+  id?: number;
+  titulo: string;
+  imagen: string;
+  video: string;
+  grupo: "front end" | "back end" | "innovación y gestión";
+  descripcion: string;
+}
 
-  const [titulo, setTitulo] = useState(datosVideo.valor[ID.valor - 1].titulo);
+const Editar: FC = () => {
+  const { ID, verEditor } = useContext(ContextoDatos);
+
+  const [titulo, setTitulo] = useState("");
   const [categoria, setCategoria] = useState<
     "front end" | "back end" | "innovación y gestión"
-  >(datosVideo.valor[ID.valor - 1].grupo);
-  const [imagen, setImagen] = useState(datosVideo.valor[ID.valor - 1].imagen);
-  const [video, setVideo] = useState(datosVideo.valor[ID.valor - 1].video);
-  const [descripcion, setDescripcion] = useState(
-    datosVideo.valor[ID.valor - 1].descripcion,
-  );
+  >("front end");
+  const [imagen, setImagen] = useState("");
+  const [video, setVideo] = useState("");
+  const [descripcion, setDescripcion] = useState("");
+
+  useEffect(() => {
+    fetch(`${API_VIDEOS}/${ID.valor}`)
+      .then((respueta) => respueta.json())
+      .then((dato: Video) => {
+        setTitulo(dato.titulo);
+        setCategoria(dato.grupo);
+        setImagen(dato.imagen);
+        setVideo(dato.video);
+        setDescripcion(dato.descripcion);
+      })
+      .catch(() => console.log("Algo va mas"));
+  }, [ID.valor]);
 
   const handleClickButtonClose: ClickButton = () => {
     verEditor.setValor(false);
